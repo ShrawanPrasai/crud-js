@@ -7,15 +7,14 @@ form h2 {
 
 .form-control {
   display: grid;
-  grid-template-columns: 1fr 100px;
+  grid-template-columns: 1fr auto 100px;
+  column-gap: 0.5rem;
 }
 
 .form-input {
   width: 100%;
   padding: 0.375rem 0.75rem;
-  border-radius: 0;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-radius: 0.25rem;;
   border: 1px solid #ddd;
 }
 
@@ -28,9 +27,7 @@ form h2 {
   color: #fff;
   background: #244855;
   border: transparent;
-  border-radius: 0;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
   text-transform: capitalize;
 }
