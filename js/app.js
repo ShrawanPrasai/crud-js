@@ -42,7 +42,7 @@ render();
 export function updateItemName(newName) {
   items = items.map((item) => {
     if (item.id === editId) {
-      return { ...item, name: newName };
+      return { ...item, name: newName, time: newTime };
     }
     return item;
   });
@@ -90,6 +90,7 @@ function generateId() {
 export function addItem(itemName) {
   const newItem = {
     name: itemName,
+    time: itemTime,
     completed: false,
     id: generateId(),
   };
