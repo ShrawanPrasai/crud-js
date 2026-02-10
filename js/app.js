@@ -39,7 +39,7 @@ function sortItems() {
 
 render();
 
-export function updateItemName(newName) {
+export function updateItemName(newName, newTime) {
   items = items.map((item) => {
     if (item.id === editId) {
       return { ...item, name: newName, time: newTime };
@@ -87,7 +87,7 @@ function generateId() {
   return Date.now().toString(36) + Math.random().toString(36).substr(2);
 }
 
-export function addItem(itemName) {
+export function addItem(itemName, itemTime) {
   const newItem = {
     name: itemName,
     time: itemTime,
