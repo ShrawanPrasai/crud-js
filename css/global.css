@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #7091E6;
+  background: #7091e6;
   font-family: Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.2;
@@ -16,10 +16,10 @@ body {
 
 .section-center {
   margin: 0 auto;
-  margin-top: 8rem;
-  max-width: 30rem;
-  background: #fff;
-  border-radius: 0.25rem;
+  margin-top: 15rem;
+  max-width: 35rem;
+  background: #adbbda;
+  border-radius: 3rem;
   padding: 2rem;
   position: relative;
 }
