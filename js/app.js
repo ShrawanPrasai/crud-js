@@ -29,6 +29,13 @@ function render() {
   app.appendChild(formElement);
   app.appendChild(itemsElement);
 }
+function sortItems() {
+  items.sort((a, b) => {
+    const timeA = a.time || "23:59";
+    const timeB = b.time || "23:59";
+    return timeA.localeCompare(timeB);
+  });
+}
 
 render();
 
@@ -40,6 +47,7 @@ export function updateItemName(newName) {
     return item;
   });
   editId = null;
+  sortItems(); //sort after update
   setLocalStorage(items);
   render();
   setTimeout(() => alert("Item Updated Successfully!"), 0);
@@ -86,6 +94,7 @@ export function addItem(itemName) {
     id: generateId(),
   };
   items = [...items, newItem];
+  sortItems(); // sort the item after it is added
   setLocalStorage(items);
   render();
   setTimeout(() => alert("Item Added Successfully!"), 10);
