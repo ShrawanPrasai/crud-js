@@ -39,9 +39,9 @@ export function createForm(editId, itemToEdit) {
 
     // added conditions
     if (editId) {
-      updateItemName(value);
+      updateItemName(value, timeValue);
     } else {
-      addItem(value);
+      addItem(value, timeValue);
     }
 
     input.value = "";
