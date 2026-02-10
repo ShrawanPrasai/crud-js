@@ -11,7 +11,7 @@ export function createForm(editId, itemToEdit) {
       <input
         type="text"
         class="form-input"
-        placeholder="e.g. eggs"
+        placeholder="e.g. Shopping"
         value="${itemToEdit ? itemToEdit.name : ""}"
       />
       <input
