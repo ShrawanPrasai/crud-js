@@ -14,6 +14,11 @@ export function createForm(editId, itemToEdit) {
         placeholder="e.g. eggs"
         value="${itemToEdit ? itemToEdit.name : ""}"
       />
+      <input
+        type="time"
+        class="form-input time-input"
+        value="${itemToEdit && itemToEdit.time ? itemToEdit.time : ""}"
+      />
       <button type="submit" class="btn">
         ${editId ? "edit item" : "add item"}
       </button>
@@ -23,8 +28,10 @@ export function createForm(editId, itemToEdit) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const input = form.querySelector(".form-input");
+    const timeInput = form.querySelector('input[type="time"]');
     const value = input.value.trim();
-
+    const timeValue = timeInput.value;
+    
     if (!value) {
       alert("please provide value", "error");
       return;
@@ -38,6 +45,7 @@ export function createForm(editId, itemToEdit) {
     }
 
     input.value = "";
+    timeInput.value = "";
   });
 
   return form;
