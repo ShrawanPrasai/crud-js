@@ -10,7 +10,7 @@ export function createSingleItem(item) {
     <p style="text-decoration: ${item.completed ? "line-through" : "none"}">
       ${item.name}
     </p>
-     <p class="item-time">${item.time || ""}</p>
+     <p class="item-time">${item.time || "No Time"}</p>
     <button class="btn icon-btn edit-btn" type="button">
       <i class="fa-regular fa-pen-to-square"></i>
     </button>
